@@ -1,0 +1,19 @@
+{
+  "name": "jsp-parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "build": "canopy jsp.peg --lang js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canopy": "^0.3.0",
+    "fs-extra": "^7.0.0",
+    "nodemon": "^1.18.3"
+  }
+}
