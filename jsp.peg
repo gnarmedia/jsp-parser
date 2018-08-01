@@ -1,8 +1,9 @@
 grammar HTML
-  document       <-  (doctype / text / tag)*
-  tag            <-  open_tag (text / tag)* close_tag
-  open_tag       <-  open_bracket [0-9a-zA-Z \"'=-]+ ">"
-  close_tag      <-  "</" [0-9a-zA-Z]+ ">"
-  open_bracket   <-  "<%?@?"
-  doctype        <-  "<!DOCTYPE " [0-9a-zA-Z]+ ">"
+  document       <-  (text / tag)*
+  tag            <-  tag_open (text / tag)* tag_close
+  tag_open       <-  "<" (element_html / element_jsp) ">"
+  tag_close      <-  "</" (element_html / element_jsp) ">"
+  open_bracket   <-  "<"
+  element_html   <-  [a-z0-9 \"']+
+  element_jsp    <-  [a-z:]+
   text           <-  [^<]+
