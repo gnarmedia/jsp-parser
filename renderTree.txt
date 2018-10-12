@@ -1,0 +1,20 @@
+{ tagname: '!xml',
+  parent: undefined,
+  child: 
+   { div: 
+      [ { tagname: 'div',
+          parent: [Circular],
+          child: 
+           { br: 
+              [ { tagname: 'br',
+                  parent: [Circular],
+                  child: {},
+                  attrsMap: undefined,
+                  val: '',
+                  addChild: [Function] } ] },
+          attrsMap: undefined,
+          val: 'thissucks',
+          addChild: [Function] } ] },
+  attrsMap: {},
+  val: undefined,
+  addChild: [Function] }
